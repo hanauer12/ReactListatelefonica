@@ -11,5 +11,4 @@ class Contatos extends Component{
         }
      }
 
-
 export default Contatos;

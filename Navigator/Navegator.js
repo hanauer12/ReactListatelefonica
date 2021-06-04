@@ -2,10 +2,11 @@ import 'react-native-gesture-handler';
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+ 
 
 //telas/componente
 import Contatos from '../Modules/Contatos/Contatos';
-import Editar from '../Modules/Cadastro/Cadastro';
+import Cadastro from '../Modules/Cadastro/Cadastro';
 import Detalhes from '../Modules/Detalhes/Detalhes';
 const Stack = createStackNavigator();
 
@@ -16,11 +17,11 @@ const Navigator = () => {
         {/*Utilizando o componete de navegaçao STACK */}
         {/*screenOptions -> conf padrao para todos as telas do stack*/}
         {/*initialRouteName -> define a tela inicial da aplicacao  */}
-            <Stack.Navigator screenOptions={{}} initialRouteName={'Contatos'}>
+            <Stack.Navigator screenOptions={{}} initialRouteName={'Cadastro'}>
                 {/* Criando as tela de pilha*/}
                 {/* options -> conf para a tela em questão*/  }
                <Stack.Screen options={optionsContato} name={'Contatos'} component={Contatos}/> 
-               <Stack.Screen  name={'Cadastro'} component={Editar}/>
+               <Stack.Screen  name={'Cadastro'} component={Cadastro}/>
                <Stack.Screen  name={'Detalhes'} component={Detalhes}/>
 
             </Stack.Navigator>
